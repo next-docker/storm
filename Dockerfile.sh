@@ -25,6 +25,8 @@ echo "ENV STORM_HOME /opt/storm/apache-storm-\${STORM_VERSION}"
 
 echo "RUN  wget http://mirrors.muzzy.org.uk/apache/storm/apache-storm-\${STORM_VERSION}/apache-storm-\${STORM_VERSION}.tar.gz ;gunzip apache-storm-\${STORM_VERSION}.tar.gz; tar -xvf apache-storm-\${STORM_VERSION}.tar; mkdir -p \${STORM_HOME}; mv apache-storm-\${STORM_VERSION}/* \${STORM_HOME}; rm apache-storm-\${STORM_VERSION}.tar; rm -fR apache-storm-\${STORM_VERSION}"
 
+echo "RUN apt-get install -y python"
+
 echo "ENV PATH \${PATH}:\${STORM_HOME}/bin"
 
 

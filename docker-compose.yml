@@ -1,0 +1,28 @@
+version: '2'
+services:
+  zookeeper:
+    image: ping2ravi/zookeeper:3.4.8_oracle_jdk8.92.14_ubuntu15.10
+    ports: 
+      - "2181:2181"
+      - "22"
+  nimbus:
+    image: ping2ravi/storm:nimbus_0.10.1_oracle_jdk8.92.14_ubuntu.15.10
+    ports:
+      - "3773:3773"
+      - "3772:3772"
+      - "6627:6627"
+      - "22"
+    links: 
+      - zookeeper:zk
+    depends_on:
+      - zookeeper
+  ui:
+    image: ping2ravi/storm:ui_0.10.1_oracle_jdk8.92.14_ubuntu.15.10
+    ports:
+      - "8080:8080"
+      - "22"
+    links: 
+      - nimbus:nimbus
+      - zookeeper:zk
+    depends_on:
+      - nimbus
