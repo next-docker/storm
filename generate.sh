@@ -1,6 +1,6 @@
 UBUNTU_VERSIONS=(14.04 15.04 15.10)
-JDK_VERSIONS=(oracle_jdk7.80.15 oracle_jdk8.66.17)
-STORM_VERSIONS=(0.9.5)
+JDK_VERSIONS=(oracle_jdk7.80.15 oracle_jdk8.66.17i oracle_jdk8.92.14)
+STORM_VERSIONS=(0.9.5 0.9.6 0.10.1 1.0.1)
 
 
 echo ${UBUNTU_VERSIONS[@]}
