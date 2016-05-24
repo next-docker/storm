@@ -17,7 +17,7 @@ echo "# Java Version ${JDK_VERSION_ARRAY[0]} update ${JDK_VERSION_ARRAY[1]}"
 echo "# Storm Version ${PARAM_STORM_VERSION}"
 echo "#     http://storm.apache.org/downloads.html"
 
-echo "RUN ln -s /usr/bin/python3.4 /usr/bin/python"
+#echo "RUN ln -s /usr/bin/python3.4 /usr/bin/python"
 echo "CMD storm nimbus"
 
 IFS=$OIFS
